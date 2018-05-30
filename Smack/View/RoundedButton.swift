@@ -8,14 +8,29 @@
 
 import UIKit
 
+@IBDesignable
 class RoundedButton: UIButton {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    //sets the button corner radius to the variable created in IDE
+    @IBInspectable var cornerRadius: CGFloat = 3.0{
+        didSet{
+            self.layer.cornerRadius = cornerRadius
+        }
     }
-    */
+    
+    //Sets the button corner  to variable created during runtime
+    func setupView(){
+        self.layer.cornerRadius = cornerRadius
+    }
+    
+    //overrides method to allow changes to show in IDE
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        self.setupView()
+    }
 
+    //Calls method to set up new view for button when button is created
+    override func awakeFromNib() {
+        self.setupView()
+    }
 }
