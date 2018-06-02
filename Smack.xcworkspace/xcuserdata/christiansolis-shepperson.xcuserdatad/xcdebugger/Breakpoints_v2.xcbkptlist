@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Smack/Controller/ChatVC.swift"
-            timestampString = "549344394.144089"
+            timestampString = "549642297.2066391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
